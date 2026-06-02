@@ -1,0 +1,39 @@
+.wrap {
+  padding: 0 18px;
+  margin-top: -34px;
+  position: relative;
+  z-index: 3;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell {
+  text-align: center;
+  padding: 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cellDivider {
+  border-inline-end: 1px solid var(--border);
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.label {
+  font-size: 10px;
+  color: var(--text-3);
+}

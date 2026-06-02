@@ -1,0 +1,12 @@
+.box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+  border: 1px solid var(--red-border, rgba(200, 16, 46, 0.18));
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 700;
+}

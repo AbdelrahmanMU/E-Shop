@@ -1,0 +1,68 @@
+.map {
+  position: relative;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.origin,
+.destination,
+.driver {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.origin {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--green);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.destination {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--charcoal);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  line-height: 1;
+}
+
+.driver {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: #fff;
+  border: 3px solid var(--red);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: top var(--transition-slow), inset-inline-start var(--transition-slow);
+}
+
+/* RTL note: the SVG path is laid out in left-to-right document space.
+   When `dir="rtl"` the visual flow of the path itself stays the same —
+   the path describes physical geography, not text order. */
+html[dir='rtl'] .svg {
+  /* No mirroring — geographic content. */
+}

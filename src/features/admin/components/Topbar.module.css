@@ -1,0 +1,123 @@
+.topbar {
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+.sub {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  inset-inline-start: 12px;
+  color: var(--text-3);
+  pointer-events: none;
+}
+
+.search {
+  width: 280px;
+  height: 36px;
+  padding-inline-start: 32px;
+  padding-inline-end: 12px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.search:focus {
+  outline: none;
+  border-color: var(--text);
+  background: var(--bg);
+  box-shadow: var(--focus-ring-primary);
+}
+
+.bellBtn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-fast);
+}
+
+.bellBtn:hover {
+  border-color: var(--text-3);
+}
+
+.bellDot {
+  position: absolute;
+  top: 9px;
+  inset-inline-end: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--gold);
+  border: 2px solid var(--bg);
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--text);
+  color: #fff;
+  border: 1px solid var(--text);
+  font-size: 12px;
+  font-weight: 800;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.actionBtn:hover {
+  background: #2A211D;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26, 22, 20, 0.18);
+}

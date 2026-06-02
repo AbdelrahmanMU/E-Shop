@@ -1,0 +1,19 @@
+.spacer {
+  height: 24px;
+}
+
+.skeletonWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.skeletonStats {
+  padding: 0 18px;
+  margin-top: -34px;
+  position: relative;
+  z-index: 3;
+}
+
+.skeletonMenu {
+  padding: 20px 18px 16px;
+}

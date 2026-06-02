@@ -1,0 +1,155 @@
+.panel {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 4px 16px 12px;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.table th {
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-3);
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.thStart {
+  text-align: start;
+}
+
+.table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border-gray);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.row:hover {
+  background: var(--bg-1);
+}
+
+.idCell {
+  font-weight: 700;
+  color: var(--text);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.customerCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--red-soft);
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.customerName {
+  font-weight: 700;
+  color: var(--text);
+  text-align: start;
+}
+
+.cityCell {
+  color: var(--text-3);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.numericCell {
+  font-weight: 700;
+}
+
+.totalCell {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.payCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.timeCell {
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+.actions {
+  display: inline-flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.actionBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.viewBtn {
+  background: var(--bg-2);
+  color: var(--text-2);
+}
+
+.viewBtn:hover {
+  background: var(--text);
+  color: var(--gold);
+}
+
+.editBtn {
+  background: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+
+.editBtn:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+.skeleton {
+  color: var(--text-4);
+  text-align: center;
+  padding: 18px 0;
+}
+
+.empty {
+  padding: 48px 12px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-3);
+}

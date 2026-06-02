@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Globals — minimal reset + body defaults.
+   Loaded last (after tokens.css → sufra.css) so it can read variables.
+   ═══════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-arabic);
+  background: #ECE7DF;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100%;
+  isolation: isolate;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Flip icons that have directional meaning when document is RTL.
+   Opt-in: add the .icon-dir class to the icon. */
+html[dir='rtl'] .icon-dir { transform: scaleX(-1); }
+
+/* Force LTR rendering for numerals + IDs — wrap in <span class="ltr"> */
+.ltr { direction: ltr; unicode-bidi: isolate; }
+
+/* Visually-hidden but accessible-to-screen-readers */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+/* Sticky-bar scroll shadow.
+   MobileShell toggles data-scrolled on itself; any descendant with
+   data-sticky="top" gets a downward shadow, data-sticky="bottom"
+   gets an upward shadow. Transition is the standard 150ms ease. */
+[data-sticky] {
+  transition: box-shadow var(--transition-fast);
+}
+[data-scrolled] [data-sticky='top'] {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+[data-scrolled] [data-sticky='bottom'] {
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+}

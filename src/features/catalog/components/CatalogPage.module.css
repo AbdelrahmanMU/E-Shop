@@ -1,0 +1,154 @@
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--ivory);
+  padding: 14px 18px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: var(--z-sticky);
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  transition: border-color var(--transition-fast);
+}
+
+.iconBtn:hover {
+  border-color: var(--text-3);
+}
+
+.titleBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.eyebrow {
+  color: var(--red);
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.bannerWrap {
+  padding: 0 18px 14px;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 88px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  color: #fff;
+}
+
+.bannerGlyph {
+  position: absolute;
+  inset-inline-end: -10px;
+  top: -20px;
+  font-size: 110px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bannerEyebrow {
+  color: var(--gold);
+}
+
+.bannerTitle {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.bannerCount {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.toolbar {
+  padding: 0 18px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.count strong {
+  color: var(--text);
+  margin-inline-end: 4px;
+}
+
+.sortBtn {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.grid {
+  padding: 0 18px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  padding: 36px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-3);
+  text-align: center;
+}
+
+.emptyGlyph {
+  font-size: 42px;
+  opacity: 0.6;
+}
+
+.emptyTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.emptyBody {
+  font-size: 12px;
+}
+
+.spacer {
+  height: 24px;
+}

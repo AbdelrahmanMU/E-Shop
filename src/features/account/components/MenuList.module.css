@@ -1,0 +1,114 @@
+.wrap {
+  padding: 20px 18px 16px;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--transition-fast);
+}
+
+.row:hover {
+  background: var(--bg-2);
+}
+
+.rowDivider {
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.iconTile {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--ivory-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.meta {
+  font-size: 10px;
+  color: var(--text-3);
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: var(--red-soft);
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.chevron {
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.signOut {
+  margin-top: 14px;
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: start;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.signOut:hover {
+  border-color: var(--red-border);
+  background: var(--bg-2);
+}
+
+.signOutIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--status-danger-bg);
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.signOutLabel {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red);
+}

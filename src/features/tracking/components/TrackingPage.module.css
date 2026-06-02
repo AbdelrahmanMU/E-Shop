@@ -1,0 +1,100 @@
+.header {
+  padding: 14px 18px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+}
+
+.titleBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.orderId {
+  font-size: 10px;
+  color: var(--text-3);
+}
+
+.detailsLink {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.mapWrap,
+.cardWrap {
+  padding: 0 18px 14px;
+}
+
+.spacer {
+  height: 32px;
+}
+
+.skeletonWrap {
+  padding: 18px;
+}
+
+.notFound {
+  padding: 80px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.notFoundGlyph {
+  font-size: 56px;
+  opacity: 0.6;
+}
+
+.notFoundTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.notFoundBody {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--text-3);
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.notFoundCta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--charcoal);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.notFoundCta:hover {
+  background: var(--charcoal-2);
+}

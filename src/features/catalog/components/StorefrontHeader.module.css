@@ -1,0 +1,63 @@
+.header {
+  padding: 14px 18px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.locationEyebrow {
+  font-size: 10px;
+  color: var(--text-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pin {
+  color: var(--red);
+  display: inline-flex;
+}
+
+.locationValue {
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+}
+
+.bellBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  position: relative;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.bellBtn:hover {
+  border-color: var(--text-3);
+}
+
+.bellDot {
+  position: absolute;
+  top: 9px;
+  inset-inline-end: 11px;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--red);
+  border: 2px solid var(--bg);
+}

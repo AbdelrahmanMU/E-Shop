@@ -1,0 +1,49 @@
+.viewport {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #ECE7DF;
+}
+
+.shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background: var(--ivory);
+  box-shadow: 0 0 0 transparent;
+  overflow: hidden;
+}
+
+/* On desktop give the column a subtle elevation so it visually reads as the app. */
+@media (min-width: 600px) {
+  .viewport {
+    padding: var(--space-6) 0;
+  }
+  .shell {
+    min-height: calc(100vh - 2 * var(--space-6));
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  position: sticky;
+  bottom: 0;
+  inset-inline: 0;
+  z-index: var(--z-sticky);
+}

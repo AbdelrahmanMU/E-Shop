@@ -1,0 +1,36 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.toneActive {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+.tonePending {
+  background: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+.toneNew {
+  background: var(--bg-2);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.toneContacted {
+  background: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+.toneInprog {
+  background: rgba(184, 115, 26, 0.12);
+  color: var(--status-warning-text);
+}
+.toneRejected {
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+}

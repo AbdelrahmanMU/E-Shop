@@ -1,0 +1,40 @@
+.body {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+.cancelBtn {
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+
+.cancelBtn:hover {
+  border-color: var(--text-3);
+  color: var(--text);
+}
+
+.deleteBtn {
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  background: var(--status-danger-text);
+  color: #fff;
+  border: 1px solid var(--status-danger-text);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.deleteBtn:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+.deleteBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

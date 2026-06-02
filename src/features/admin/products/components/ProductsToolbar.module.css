@@ -1,0 +1,85 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.searchWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.searchIcon {
+  position: absolute;
+  inset-inline-start: 12px;
+  color: var(--text-3);
+  pointer-events: none;
+}
+
+.search {
+  width: 100%;
+  height: 36px;
+  padding-inline-start: 32px;
+  padding-inline-end: 12px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text);
+  transition: var(--transition-fast);
+}
+
+.search:focus {
+  outline: none;
+  border-color: var(--text);
+  background: var(--bg);
+  box-shadow: var(--focus-ring-primary);
+}
+
+.chips {
+  display: inline-flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-2);
+  transition: var(--transition-fast);
+}
+
+.chip:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.chipActive,
+.chipActive:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--gold);
+}
+
+.countPill {
+  font-size: 11px;
+  color: var(--text-3);
+  padding: 6px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}
+
+.countPill strong {
+  color: var(--text);
+  margin-inline-end: 4px;
+}

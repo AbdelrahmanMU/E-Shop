@@ -1,0 +1,300 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Sufra E-Shop — Levantine premium food marketplace
+   Extends Homify tokens with a warmer, premium-feel surface palette.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Custom semantic layer over tokens — derived via oklch from --red */
+:root {
+  --ivory:        #F8F3EA;    /* warm cream surface */
+  --ivory-2:      #F1E9DA;    /* deeper cream, section bg */
+  --charcoal:     #1A1614;    /* premium dark for hero */
+  --charcoal-2:   #2A211D;
+  --olive:        #4A5A2F;    /* secondary brand — olive green */
+  --olive-soft:   rgba(74,90,47,0.08);
+  --saffron:      #B8731A;    /* warm accent for highlights */
+  --gold:         #C9A45C;    /* subtle premium gold */
+}
+
+/* Root reset */
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-arabic);
+  background: #ECE7DF;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: transparent; color: inherit; padding: 0; }
+
+/* Wordmark */
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  direction: ltr;
+}
+.brand-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+/* Numeric utility */
+.num {
+  font-family: var(--font-numbers);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* Premium product card placeholder — gradient + text */
+.product-ph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--ph-a, #d5cdb8) 0%, var(--ph-b, #b8a98a) 100%);
+  overflow: hidden;
+}
+.product-ph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.35), transparent 55%);
+}
+.product-ph .ph-label {
+  position: absolute;
+  inset: auto 0 12px 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: rgba(255,255,255,0.92);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  z-index: 2;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
+}
+.product-ph .ph-glyph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+  opacity: 0.92;
+}
+
+/* Levantine category color seeds (for ph-a / ph-b) */
+.cat-olive   { --ph-a:#7a8a4d; --ph-b:#4a5a2f; }
+.cat-tahini  { --ph-a:#e9d9b8; --ph-b:#b8a06c; }
+.cat-spices  { --ph-a:#c25a2c; --ph-b:#8a3b1a; }
+.cat-pickles { --ph-a:#9a8a6c; --ph-b:#5a4a2c; }
+.cat-sweets  { --ph-a:#d4a8a0; --ph-b:#9a4a4a; }
+.cat-bakery  { --ph-a:#dcc59a; --ph-b:#9a7a4a; }
+.cat-grains  { --ph-a:#d8c4a0; --ph-b:#8a6a3a; }
+.cat-coffee  { --ph-a:#6a4a32; --ph-b:#2a1a14; }
+
+/* Sticky bottom action */
+.sticky-action {
+  position: absolute;
+  inset: auto 0 0 0;
+  background: linear-gradient(to top, var(--bg) 60%, rgba(255,255,255,0));
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 5;
+}
+
+/* Pill / chip helpers used across screens */
+.pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 10px; border-radius: 9999px;
+  font-size: 11px; font-weight: 700;
+  background: var(--bg-3); color: var(--text-2);
+  border: 1px solid transparent;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.pill.active { background: var(--charcoal); color: #fff; }
+.pill.brand  { background: var(--red); color: #fff; }
+.pill.outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-2);
+}
+
+/* Dark theme overrides — applied to .theme-dark scope */
+.theme-dark {
+  --bg: #14110F;
+  --bg-0: #14110F;
+  --bg-1: #1A1614;
+  --bg-2: #1F1A17;
+  --bg-3: #2A2320;
+  --bg-4: #3A302B;
+  --text:   #F2EDE4;
+  --text-2: #C9C0B0;
+  --text-3: #8A8275;
+  --text-4: #5A5448;
+  --border: #2E2622;
+  --border-gray: #241D1A;
+  --nav-bg: rgba(20,17,15,0.95);
+  --red-soft: rgba(200,16,46,0.12);
+  --red-border: rgba(200,16,46,0.28);
+  --status-success-bg: rgba(5,150,105,0.14);
+  --status-success-text: #4ade80;
+  --status-warning-bg: rgba(217,119,6,0.14);
+  --status-warning-text: #fbbf24;
+  --status-info-bg: rgba(37,99,235,0.14);
+  --status-info-text: #60a5fa;
+  --status-danger-bg: rgba(200,16,46,0.14);
+  --status-danger-text: #f87171;
+}
+
+/* Density scale: applied to inline custom prop --dens (default 1) */
+.density-comfortable { --dens: 1.0; }
+.density-default     { --dens: 0.92; }
+.density-compact     { --dens: 0.82; }
+
+/* Font family swap */
+.font-cairo   { --font-arabic: 'Cairo', system-ui, sans-serif; }
+.font-tajawal { --font-arabic: 'Tajawal', system-ui, sans-serif; }
+.font-readex  { --font-arabic: 'Readex Pro', system-ui, sans-serif; }
+.font-ibm     { --font-arabic: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+
+/* Custom scrollbar hide for screens */
+.scroll-y { overflow-y: auto; scrollbar-width: none; }
+.scroll-y::-webkit-scrollbar { display: none; }
+.scroll-x { overflow-x: auto; scrollbar-width: none; }
+.scroll-x::-webkit-scrollbar { display: none; }
+
+/* Hero gradient */
+.hero-gradient {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(200,16,46,0.16), transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.85) 100%);
+}
+
+/* Premium hero photo placeholder */
+.hero-ph {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(201,164,92,0.25), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(74,90,47,0.4), transparent 50%),
+    linear-gradient(135deg, #2a211d 0%, #3a2f29 60%, #1a1614 100%);
+}
+.hero-ph::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle 2px at 25% 30%, rgba(255,255,255,0.06), transparent),
+    radial-gradient(circle 1.5px at 70% 25%, rgba(255,255,255,0.05), transparent),
+    radial-gradient(circle 3px at 60% 70%, rgba(201,164,92,0.18), transparent),
+    radial-gradient(circle 2.5px at 35% 65%, rgba(255,255,255,0.04), transparent);
+  background-size: 220px 220px;
+}
+
+/* Map placeholder */
+.map-ph {
+  background:
+    radial-gradient(circle at 30% 40%, rgba(200,16,46,0.16), transparent 35%),
+    radial-gradient(circle at 60% 55%, rgba(200,16,46,0.22), transparent 30%),
+    radial-gradient(circle at 50% 70%, rgba(200,16,46,0.18), transparent 35%),
+    linear-gradient(135deg, #eef2f7 0%, #dde4ec 100%);
+  position: relative;
+}
+.map-ph::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.7;
+}
+
+/* Sparkline svg helper */
+.spark { width: 100%; height: 40px; }
+.spark path { fill: none; stroke: var(--red); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.spark .area { fill: var(--red-soft); stroke: none; }
+
+/* Reusable scrollable surface */
+.surface {
+  background: var(--bg);
+  color: var(--text);
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.surface::-webkit-scrollbar { display: none; }
+
+/* Notes card on canvas */
+.notes-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  font-family: var(--font-arabic);
+  line-height: 1.7;
+}
+.notes-card h2 { margin: 0 0 6px; font-size: 24px; font-weight: 800; }
+.notes-card h3 { margin: 18px 0 6px; font-size: 14px; font-weight: 800; color: var(--red); letter-spacing: 0.04em; }
+.notes-card p, .notes-card li { font-size: 13px; color: var(--text-2); margin: 0 0 6px; }
+.notes-card ul { padding-inline-start: 18px; margin: 0 0 8px; }
+.notes-card .tag {
+  display: inline-block; padding: 3px 10px; border-radius: 9999px;
+  background: var(--red-soft); color: var(--red);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+}
+
+/* Browser window frame for desktop admin artboards */
+.win-frame {
+  background: #ECE7DF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.win-bar {
+  height: 36px;
+  background: #E4DED4;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+.win-dot { width: 11px; height: 11px; border-radius: 50%; }
+.win-dot.r { background: #ff5f57; }
+.win-dot.y { background: #ffbd2e; }
+.win-dot.g { background: #28c840; }
+.win-url {
+  margin-inline-start: 14px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: var(--text-3);
+  font-family: var(--font-numbers);
+  flex: 1;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.win-content { flex: 1; overflow: auto; scrollbar-width: thin; }
+.win-content::-webkit-scrollbar { width: 8px; height: 8px; }
+.win-content::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 4px; }

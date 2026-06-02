@@ -1,0 +1,25 @@
+# deps
+node_modules
+
+# build
+dist
+*.tsbuildinfo
+
+# env
+.env
+.env.local
+.env.*.local
+
+# test artifacts
+playwright-report
+test-results
+coverage
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# OS
+.DS_Store
+Thumbs.db

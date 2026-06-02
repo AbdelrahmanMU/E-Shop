@@ -1,0 +1,96 @@
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spine {
+  position: absolute;
+  inset-inline-start: 9px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border);
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  border: 3px solid var(--bg);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotDone {
+  background: var(--green);
+}
+
+.dotCurrent {
+  background: var(--red);
+  box-shadow: 0 0 0 4px var(--red-soft);
+}
+
+.dotPending {
+  background: var(--bg-3);
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.labelDone {
+  color: var(--text);
+}
+
+.labelCurrent {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.labelPending {
+  color: var(--text-3);
+}
+
+.ts {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.tsCurrent {
+  color: var(--red);
+  font-weight: 800;
+}

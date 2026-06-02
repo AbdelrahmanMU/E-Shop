@@ -1,0 +1,21 @@
+.gridA,
+.gridB {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sideStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .gridA,
+  .gridB {
+    grid-template-columns: 1fr;
+  }
+}

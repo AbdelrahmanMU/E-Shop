@@ -1,0 +1,7 @@
+.row {
+  display: flex;
+  gap: 6px;
+  padding: 0 18px var(--space-3);
+}
+
+/* Pill states styled via the global .pill class in src/styles/sufra.css. */

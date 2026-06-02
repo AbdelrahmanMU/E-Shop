@@ -1,0 +1,145 @@
+.panel {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 4px 16px 12px;
+}
+
+.tableWrap { width: 100%; overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.table th {
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-3);
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.thStart { text-align: start; }
+
+.table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border-gray);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.row:hover { background: rgba(201, 164, 92, 0.06); }
+
+.productCell { display: flex; align-items: center; gap: 10px; text-align: start; }
+
+.thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.productText { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+
+.productName {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productCode { font-size: 10px; color: var(--text-3); }
+
+.catChip {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  background: var(--bg-2);
+  color: var(--text-2);
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.priceCell { font-weight: 800; color: var(--text); white-space: nowrap; }
+.numericCell { font-weight: 700; color: var(--text); }
+
+.stockCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stockNum { font-weight: 700; }
+
+.stockTrack {
+  width: 60px;
+  height: 3px;
+  background: var(--bg-3);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.stockFill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.ratingCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+}
+
+.actions {
+  display: inline-flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.actionBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.viewBtn { background: var(--bg-2); color: var(--text-2); }
+.viewBtn:hover { background: var(--text); color: var(--gold); }
+
+.editBtn { background: var(--status-info-bg); color: var(--status-info-text); }
+.editBtn:hover { background: var(--blue); color: #fff; }
+
+.deleteBtn { background: var(--status-danger-bg); color: var(--status-danger-text); }
+.deleteBtn:hover { background: var(--status-danger-text); color: #fff; }
+
+.skeleton {
+  color: var(--text-4);
+  text-align: center;
+  padding: 18px 0;
+}
+
+.empty {
+  padding: 48px 12px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-3);
+}

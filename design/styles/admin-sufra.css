@@ -1,0 +1,383 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Sufra Admin Theme — overrides Homify red palette with Sufra identity
+   Applied via .sufra-admin scope so it doesn't bleed into other UI.
+   Identity: deep charcoal primary · warm gold accent · olive success
+   ═══════════════════════════════════════════════════════════════════ */
+
+.sufra-admin {
+  /* Re-map all the brand color tokens to Sufra's premium palette.
+     Charcoal replaces red as the primary "brand" color, gold for highlights. */
+  --red:        #1A1614;    /* primary actions, headings — Sufra charcoal */
+  --red-dark:   #000000;    /* hover state */
+  --red-soft:   rgba(26,22,20,0.06);    /* selected nav, soft wash */
+  --red-border: rgba(26,22,20,0.18);
+
+  /* Backgrounds — warmer ivory canvas, no longer cool gray */
+  --bg-0: #FFFFFF;
+  --bg:   #FFFFFF;
+  --bg-1: #F8F3EA;          /* table headers — ivory */
+  --bg-2: #F4EFE6;          /* page canvas — slightly deeper ivory */
+  --bg-3: #ECE5D6;          /* depressed surfaces */
+  --bg-4: #DDD3BE;          /* dividers */
+
+  --border:      #E4DCC8;
+  --border-gray: #EFE7D5;
+
+  /* Text — slightly warmer than slate */
+  --text:   #1A1614;
+  --text-2: #3A2F29;
+  --text-3: #7A6E62;
+  --text-4: #A89B86;
+
+  /* Sidebar dark variant — premium charcoal */
+  --sidebar-bg: #1A1614;
+  --sidebar-text: #C9C0B0;
+  --sidebar-text-active: #F2EDE4;
+  --sidebar-hover: rgba(255,255,255,0.04);
+  --sidebar-active-bg: rgba(201,164,92,0.12);
+  --sidebar-accent: #C9A45C;   /* gold */
+
+  /* Semantic accents — Sufra-tuned */
+  --green:        #5A7A2F;    /* olive green for success */
+  --green-bright: #7A9A4F;
+  --orange:       #B8731A;    /* saffron for warning */
+  --blue:         #4A6580;    /* muted slate blue for info */
+  --gold:         #C9A45C;    /* premium accent */
+
+  --status-success-bg:   #F0F4E4;
+  --status-success-text: #4A6627;
+  --status-warning-bg:   #F8EDD8;
+  --status-warning-text: #8A5215;
+  --status-info-bg:      #E8EEF4;
+  --status-info-text:    #3A5168;
+  --status-danger-bg:    #F4E4DA;
+  --status-danger-text:  #8A3B1A;
+  --status-neutral-bg:   #ECE5D6;
+  --status-neutral-text: #7A6E62;
+
+  --nav-bg: #FFFFFF;
+
+  /* Focus rings — gold */
+  --focus-ring:         0 0 0 3px rgba(26,22,20,0.06);
+  --focus-ring-primary: 0 0 0 3px rgba(201,164,92,0.22);
+
+  font-family: var(--font-arabic);
+  background: var(--bg-2);
+}
+
+/* ── Premium dark sidebar ─────────────────────────────────────────── */
+.sufra-admin .admin-sidebar {
+  background: var(--sidebar-bg);
+  border-left: 1px solid rgba(255,255,255,0.04);
+  color: var(--sidebar-text);
+}
+.sufra-admin .sidebar-logo {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.sufra-admin .sidebar-logo-link {
+  color: var(--sidebar-text-active);
+}
+.sufra-admin .logo-accent {
+  color: var(--sidebar-accent);
+}
+.sufra-admin .sidebar-badge {
+  background: rgba(201,164,92,0.15);
+  color: var(--sidebar-accent);
+}
+.sufra-admin .sidebar-user {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.sufra-admin .user-avatar {
+  background: linear-gradient(135deg, var(--gold), #B8731A);
+  color: #1A1614;
+}
+.sufra-admin .user-name { color: var(--sidebar-text-active); }
+.sufra-admin .user-role { color: rgba(201,192,176,0.6); }
+.sufra-admin .nav-section-label {
+  color: rgba(201,192,176,0.45);
+}
+.sufra-admin .nav-item {
+  color: var(--sidebar-text);
+}
+.sufra-admin .nav-item:hover {
+  background: var(--sidebar-hover);
+  color: var(--sidebar-text-active);
+}
+.sufra-admin .nav-item.active {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-accent);
+}
+.sufra-admin .nav-item.active .nav-icon {
+  color: var(--sidebar-accent);
+}
+.sufra-admin .nav-item.active::before {
+  content: '';
+  position: absolute;
+  inset-inline-end: -12px;
+  top: 4px; bottom: 4px;
+  width: 3px;
+  background: var(--sidebar-accent);
+  border-radius: 9999px;
+}
+.sufra-admin .nav-icon { color: rgba(201,192,176,0.6); }
+.sufra-admin .nav-badge {
+  background: rgba(255,255,255,0.08);
+  color: var(--sidebar-text-active);
+}
+.sufra-admin .nav-badge.warning {
+  background: rgba(184,115,26,0.22);
+  color: #E8C088;
+}
+.sufra-admin .sidebar-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.sufra-admin .logout-btn { color: rgba(201,192,176,0.6); }
+.sufra-admin .logout-btn:hover { color: #F87171; }
+
+/* ── Topbar ──────────────────────────────────────────────────────── */
+.sufra-admin .admin-topbar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.sufra-admin .page-title-bar {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.sufra-admin .top-search {
+  background: var(--bg-2);
+  border-color: var(--border);
+}
+.sufra-admin .top-search:focus {
+  border-color: var(--text);
+  box-shadow: var(--focus-ring-primary);
+}
+.sufra-admin .notif-dot { background: var(--gold); }
+
+/* Primary action button — charcoal with gold hint on hover */
+.sufra-admin .btn-add {
+  background: var(--text);
+  color: #fff;
+  border: 1px solid var(--text);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+.sufra-admin .btn-add:hover {
+  background: #2A211D;
+  box-shadow: 0 4px 14px rgba(26,22,20,0.18);
+  transform: translateY(-1px);
+}
+
+/* ── Stat cards ──────────────────────────────────────────────────── */
+.sufra-admin .stat-card {
+  border-radius: 14px;
+}
+.sufra-admin .stat-card::before {
+  background: linear-gradient(90deg, var(--gold), var(--text));
+}
+.sufra-admin .stat-card:hover {
+  border-color: var(--gold);
+}
+.sufra-admin .stat-icon {
+  background: var(--bg-2);
+  color: var(--text);
+  border-radius: 10px;
+}
+.sufra-admin .stat-icon.orange {
+  background: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+.sufra-admin .stat-icon.blue {
+  background: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+.sufra-admin .stat-icon.green {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+.sufra-admin .stat-delta.up {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+.sufra-admin .stat-delta.down {
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+}
+
+/* ── Panels & headings ───────────────────────────────────────────── */
+.sufra-admin .panel {
+  border-radius: 14px;
+}
+.sufra-admin .section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.005em;
+}
+.sufra-admin .panel-link { color: var(--text); font-weight: 700; }
+.sufra-admin .panel-link:hover { color: var(--gold); }
+
+/* ── Chart — olive→gold gradient ─────────────────────────────────── */
+.sufra-admin .chart-bar {
+  background: linear-gradient(to top, #1A1614, #4A3A2F);
+}
+.sufra-admin .chart-col:hover .chart-bar {
+  background: linear-gradient(to top, var(--gold), #E8C088);
+}
+.sufra-admin .bar-tooltip {
+  background: var(--text);
+  color: var(--gold);
+}
+
+/* ── Tables ──────────────────────────────────────────────────────── */
+.sufra-admin .data-table th {
+  background: var(--bg-1);
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+}
+.sufra-admin .data-table td {
+  border-bottom: 1px solid var(--border-gray);
+}
+.sufra-admin .data-table tbody tr:hover {
+  background: var(--bg-1);
+}
+.sufra-admin .data-table.full tr:hover {
+  background: rgba(201,164,92,0.06);
+}
+.sufra-admin .price-cell {
+  color: var(--text);   /* tabular prices in charcoal, not red */
+}
+.sufra-admin .property-name { color: var(--text); }
+
+/* ── Status chips — re-tuned palette ─────────────────────────────── */
+.sufra-admin .status-chip.active {
+  background: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+.sufra-admin .status-chip.pending {
+  background: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+.sufra-admin .status-chip.new {
+  background: var(--bg-2);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.sufra-admin .status-chip.contacted {
+  background: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+.sufra-admin .status-chip.inprog {
+  background: rgba(184,115,26,0.12);
+  color: var(--status-warning-text);
+}
+.sufra-admin .status-chip.rejected {
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+}
+
+/* ── Filter chips ────────────────────────────────────────────────── */
+.sufra-admin .f-chip {
+  background: var(--bg);
+  border-color: var(--border);
+}
+.sufra-admin .f-chip:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+.sufra-admin .f-chip.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--gold);
+}
+
+/* ── Pagination ──────────────────────────────────────────────────── */
+.sufra-admin .pg-btn {
+  background: var(--bg);
+  border-color: var(--border);
+}
+.sufra-admin .pg-btn.active {
+  background: var(--text);
+  color: var(--gold);
+  border-color: var(--text);
+}
+
+/* ── Toolbar inputs ──────────────────────────────────────────────── */
+.sufra-admin .toolbar-search input {
+  background: var(--bg-2);
+  border-color: var(--border);
+}
+.sufra-admin .toolbar-search input:focus {
+  border-color: var(--text);
+  box-shadow: var(--focus-ring-primary);
+  background: var(--bg);
+}
+
+/* ── Action buttons in tables ────────────────────────────────────── */
+.sufra-admin .table-action.edit {
+  background: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+.sufra-admin .table-action.edit:hover {
+  background: var(--blue);
+  color: #fff;
+}
+.sufra-admin .table-action.view {
+  background: var(--bg-2);
+  color: var(--text-2);
+}
+.sufra-admin .table-action.view:hover {
+  background: var(--text);
+  color: var(--gold);
+}
+.sufra-admin .table-action.delete {
+  background: var(--status-danger-bg);
+  color: var(--status-danger-text);
+}
+.sufra-admin .table-action.delete:hover {
+  background: var(--status-danger-text);
+  color: #fff;
+}
+
+/* ── Activity list dots ──────────────────────────────────────────── */
+.sufra-admin .activity-dot { background: var(--text); }
+.sufra-admin .activity-dot.green  { background: var(--green); }
+.sufra-admin .activity-dot.blue   { background: var(--blue); }
+.sufra-admin .activity-dot.orange { background: var(--orange); }
+
+/* ── Page header ─────────────────────────────────────────────────── */
+.sufra-admin .page-header h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.005em;
+}
+.sufra-admin .page-header {
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Dark theme variant for the admin ────────────────────────────── */
+.theme-dark .sufra-admin {
+  --bg:   #14110F;
+  --bg-0: #14110F;
+  --bg-1: #1F1A17;
+  --bg-2: #1A1614;
+  --bg-3: #2A2320;
+  --bg-4: #3A302B;
+  --text:   #F2EDE4;
+  --text-2: #C9C0B0;
+  --text-3: #8A8275;
+  --text-4: #5A5448;
+  --border: #2E2622;
+  --border-gray: #241D1A;
+  --red:        #C9A45C;
+  --red-dark:   #B8923D;
+  --red-soft:   rgba(201,164,92,0.10);
+  --red-border: rgba(201,164,92,0.28);
+}
+.theme-dark .sufra-admin .sidebar-bg { background: #0F0D0B; }
+.theme-dark .sufra-admin .admin-sidebar { background: #0F0D0B; }
+.theme-dark .sufra-admin .stat-card:hover { border-color: var(--gold); }
+.theme-dark .sufra-admin .btn-add { background: var(--gold); color: #1A1614; border-color: var(--gold); }
+.theme-dark .sufra-admin .btn-add:hover { background: #E8C088; }
+.theme-dark .sufra-admin .chart-bar { background: linear-gradient(to top, #4A3A2F, var(--gold)); }
+.theme-dark .sufra-admin .pg-btn.active { background: var(--gold); color: #1A1614; border-color: var(--gold); }
+.theme-dark .sufra-admin .f-chip.active { background: var(--gold); color: #1A1614; border-color: var(--gold); }

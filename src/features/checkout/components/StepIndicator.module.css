@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  gap: 6px;
+  padding: 0 18px 16px;
+}
+
+.bar {
+  flex: 1;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+}
+
+.barActive {
+  background: var(--charcoal);
+}

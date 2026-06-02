@@ -1,0 +1,36 @@
+.empty {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 64px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--text);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--text);
+  color: var(--gold);
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.cta:hover {
+  background: var(--charcoal-2);
+}

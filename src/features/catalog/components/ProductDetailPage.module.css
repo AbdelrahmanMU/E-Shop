@@ -1,0 +1,305 @@
+.article {
+  /* Padding-bottom reserves space for the sticky bar (≈ 86px). */
+  padding-bottom: 100px;
+}
+
+.hero {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.heroBar {
+  position: absolute;
+  top: 14px;
+  inset-inline: 14px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.heroBarRight {
+  display: flex;
+  gap: 8px;
+}
+
+.glassBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.glassBtn:hover {
+  transform: translateY(-1px);
+}
+
+.glassBtnHeart {
+  color: var(--red);
+}
+
+.dots {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dotActive {
+  width: 18px;
+  background: var(--charcoal);
+}
+
+.body {
+  background: var(--bg);
+  border-radius: 24px 24px 0 0;
+  margin-top: -20px;
+  position: relative;
+  padding: 22px 18px 12px;
+  z-index: 2;
+}
+
+.subtitle {
+  color: var(--olive);
+}
+
+.title {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.metaRow strong {
+  color: var(--text);
+}
+
+.metaMuted {
+  color: var(--text-3);
+}
+
+.dotSep {
+  width: 3px;
+  height: 3px;
+  border-radius: var(--radius-full);
+  background: var(--text-4);
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-2);
+}
+
+.sizes {
+  display: flex;
+  gap: 8px;
+}
+
+.sizeChip {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  color: var(--text-2);
+  transition: var(--transition-fast);
+}
+
+.sizeChipActive {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  color: #fff;
+}
+
+.tabBar {
+  display: flex;
+  gap: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-3);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.tab:hover {
+  color: var(--text-2);
+}
+
+.tabActive {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+
+.tabBody {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-top: 12px;
+  min-height: 48px;
+}
+
+.tabBody p {
+  margin: 0;
+}
+
+.tabEmpty {
+  color: var(--text-3);
+}
+
+.quickRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.quickTile {
+  flex: 1;
+  background: var(--ivory-2);
+  border-radius: 10px;
+  padding: 12px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.quickIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.quickLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+
+/* Sticky bottom action bar */
+.stickyBar {
+  position: sticky;
+  bottom: 0;
+  inset-inline: 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 12px 18px calc(var(--space-5) + 6px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: var(--z-sticky);
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.priceLine {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.oldPrice {
+  font-size: 11px;
+  color: var(--text-4);
+  text-decoration: line-through;
+}
+
+.addBtn {
+  flex: 1;
+  background: var(--charcoal);
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.addBtn:hover:not(:disabled) {
+  background: var(--charcoal-2);
+}
+
+.addBtn:disabled {
+  background: var(--text-4);
+  cursor: not-allowed;
+}
+
+.notFound {
+  padding: 80px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.notFoundGlyph {
+  font-size: 56px;
+  opacity: 0.6;
+}
+
+.notFoundTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.notFoundBody {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-3);
+}
